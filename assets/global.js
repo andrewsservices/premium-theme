@@ -1266,7 +1266,7 @@ function setScrollVar() {
   const htmlElement = document.documentElement
   const percentOfScreenHeightScrolled =
     htmlElement.scrollTop / htmlElement.clientHeight
-  console.log(Math.min(percentOfScreenHeightScrolled * 100, 100))
+  // console.log(Math.min(percentOfScreenHeightScrolled * 100, 100))
   htmlElement.style.setProperty(
     "--scroll",
     Math.min(percentOfScreenHeightScrolled * 100, 100)
@@ -1280,6 +1280,7 @@ const observer = new IntersectionObserver(entries => {
     const entry = entries[i]
     if (entry.isIntersecting) {
       document.querySelectorAll("[data-img]").forEach(img => {
+        console.log(img)
         img.classList.remove("show")
       })
       const img = document.querySelector(entry.target.dataset.imgToShow)
@@ -1288,6 +1289,7 @@ const observer = new IntersectionObserver(entries => {
     }
   }
 })
+
 
 document.querySelectorAll("[data-img-to-show]").forEach(section => {
   observer.observe(section)

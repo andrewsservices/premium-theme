@@ -1,11 +1,26 @@
-<div class="main-container">
+<div class="main-container" id="main-container">
   <div class="imgs">
-    <img
-      src="{{section.settings.image_one | img_url}}"
+    <div class="top-section-img show"
       data-img
       id="img-1"
-      class="top-section-img show"
-    />
+    >
+      <h2>title</h2>
+      <img src="{{ section.settings.image_one | img_url:'500x'}}"/>
+    </div>
+    <div
+      data-img
+      id="img-2"
+    >
+      <h2>title 2</h2>
+      <img src="{{ section.settings.image_two | img_url:'500x'}}"/>
+    </div>
+    <div
+      data-img
+      id="img-3"
+    >
+      <h2>title 3</h2>
+      <img src="{{ section.settings.image_three | img_url:'500x'}}"/>
+    </div>
   </div>
   <section class="top-section full-screen-section">
     <div class="left">
@@ -21,8 +36,25 @@
   <section class="full-screen-section first-main-section">
     <h1>Completely Visual</h1>
     <p>Never touch the command line, from provision to production.</p>
-    <div data-img-to-show="#img-1"></div>
+    <div data-img-to-show="#img-1">&nsbp</div>
   </section>
+  <section class="full-screen-section">
+    <h1>Full Stack</h1>
+    <p>
+      Never manage infrastructure again. One click gets you: a database, APIs,
+      deployments, hosting, etc.
+    </p>
+    <div data-img-to-show="#img-2">&nsbp</div>
+  </section>
+  <section class="full-screen-section">
+    <h1>Full Stack</h1>
+    <p>
+      Never manage infrastructure again. One click gets you: a database, APIs,
+      deployments, hosting, etc.
+    </p>
+    <div data-img-to-show="#img-3">&nsbp</div>
+  </section>
+
 </div>
 
 {% schema %}
@@ -33,6 +65,16 @@
       "type": "image_picker",
       "id": "image_one",
       "label": "Image One"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_two",
+      "label": "Image Two"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_three",
+      "label": "Image Three"
     }
     ]
   }
