@@ -1,58 +1,57 @@
 <div class="main-container" id="main-container">
   <div class="imgs">
-    <div class="top-section-img show"
+    <div class="top-section-img show image-container"
       data-img
       id="img-1"
     >
-      <h2>title</h2>
+      <a href="{{section.settings.link_one}}"><h2>{{section.settings.title_one}}</h2></a>
       <img src="{{ section.settings.image_one | img_url:'500x'}}"/>
     </div>
     <div
       data-img
       id="img-2"
+      class="image-container"
     >
-      <h2>title 2</h2>
+      <a href="{{section.settings.link_two}}"><h2>{{section.settings.title_two}}</h2></a>
       <img src="{{ section.settings.image_two | img_url:'500x'}}"/>
     </div>
     <div
       data-img
       id="img-3"
+      class="image-container"
     >
-      <h2>title 3</h2>
+      <a href="{{section.settings.link_three}}"><h2>{{section.settings.title_three}}</h2></a>
       <img src="{{ section.settings.image_three | img_url:'500x'}}"/>
     </div>
   </div>
   <section class="top-section full-screen-section">
     <div class="left">
-      <h1>Build Better Backends</h1>
+      <h1>{{section.settings.heading_one}}</h1>
       <p>
-        The only platform that gives AI the ability to autonomously build web
-        services.
+        {{section.settings.subheading_one}}
       </p>
     </div>
     <div class="right">
     </div>
   </section>
   <section class="full-screen-section first-main-section">
-    <h1>Completely Visual</h1>
-    <p>Never touch the command line, from provision to production.</p>
-    <div data-img-to-show="#img-1">&nsbp</div>
+    <h1>{{section.settings.heading_two}}</h1>
+    <p>{{section.settings.subheading_two}}</p>
+    <div data-img-to-show="#img-1">&nbsp</div>
   </section>
   <section class="full-screen-section">
-    <h1>Full Stack</h1>
+    <h1>{{section.settings.heading_three}}</h1>
     <p>
-      Never manage infrastructure again. One click gets you: a database, APIs,
-      deployments, hosting, etc.
+      {{section.settings.subheading_three}}
     </p>
-    <div data-img-to-show="#img-2">&nsbp</div>
+    <div data-img-to-show="#img-2">&nbsp</div>
   </section>
   <section class="full-screen-section">
-    <h1>Full Stack</h1>
+    <h1>{{section.settings.heading_four}}</h1>
     <p>
-      Never manage infrastructure again. One click gets you: a database, APIs,
-      deployments, hosting, etc.
+      {{section.settings.subheading_four}}
     </p>
-    <div data-img-to-show="#img-3">&nsbp</div>
+    <div data-img-to-show="#img-3">&nbsp</div>
   </section>
 
 </div>
@@ -61,15 +60,85 @@
   {
     "name": "Premium Layout",
     "settings": [
+      {
+        "type": "richtext",
+        "id": "heading_one",
+        "label": "Heading One"
+      },
+      {
+        "type": "richtext",
+        "id": "subheading_one",
+        "label": "Subheading One"
+      },
+      {
+        "type": "richtext",
+        "id": "heading_two",
+        "label": "Heading Two"
+      },
+      {
+        "type": "richtext",
+        "id": "subheading_two",
+        "label": "Subheading Two"
+      },
+      {
+        "type": "richtext",
+        "id": "heading_three",
+        "label": "Heading Three"
+      },
+      {
+        "type": "richtext",
+        "id": "subheading_three",
+        "label": "Subheading Three"
+      },
+      {
+        "type": "richtext",
+        "id": "heading_four",
+        "label": "Heading Four"
+      },
+      {
+        "type": "richtext",
+        "id": "subheading_four",
+        "label": "Subheading Four"
+      },
+      {
+        "type": "text",
+        "id": "title_one",
+        "label": "Title One"
+      },
+      {
+        "type": "url",
+        "id": "link_one",
+        "label": "Link One"
+      },
     {
       "type": "image_picker",
       "id": "image_one",
       "label": "Image One"
     },
     {
+      "type": "text",
+      "id": "title_two",
+      "label": "Title Two"
+    },
+    {
+      "type": "url",
+      "id": "link_two",
+      "label": "Link Two"
+    },
+    {
       "type": "image_picker",
       "id": "image_two",
       "label": "Image Two"
+    },
+    {
+      "type": "text",
+      "id": "title_three",
+      "label": "Title Three"
+    },
+    {
+      "type": "url",
+      "id": "link_three",
+      "label": "Link Three"
     },
     {
       "type": "image_picker",

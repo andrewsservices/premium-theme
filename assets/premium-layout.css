@@ -47,15 +47,23 @@
   transform: translateY(calc(50% - 1% * var(--value)));
 }
 
-.top-section-img{
+.image-container{
   display:flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.top-section-img img{
-  width: 80%;
+.image-container a{
+  text-decoration: none;
+}
+
+.image-container h2{
+  font-size: 40px;
+}
+
+.image-container img{
+  width: 75%;
 }
 
 
@@ -68,11 +76,11 @@
     text-align: center;
   }
 
-  body {
+  .main-container {
     font-size: 24px;
   }
 
-  h1 {
+  .main-container h1 {
     font-size: 72px;
   }
 
